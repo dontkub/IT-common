@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:rel="stylesheet" th:href="@{css/mystyle.css}">
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/firstpage}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="container">
+    <h1 class="font1" >Login</h1>
+    <form action="#" th:action="@{/login}" method="POST">
+        <div class="form-group">
+            <label for="inputId">Id</label>
+            <input type="input" class="form-control" name="id" id="inputId">
+        </div>
+
+        <div class="form-group">
+            <label for="inputPin">Pin</label>
+            <input type="password" class="form-control" name="pin" id="inputPin">
+        </div>
+
+        <div class="form-group">
+
+            <a type="submit" class="btn btn-primary" th:href="@{/firstpage}">login</a>
+        </div>
+
+        <a class="texttest" th:href="@{/customer}">Customer Registration here.</a>
+    </form>
+</div>

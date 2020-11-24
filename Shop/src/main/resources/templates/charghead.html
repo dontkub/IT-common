@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ChargHead</title>
+    <link th:rel="stylesheet" th:href="@{css/mystyle.css}">
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="nav-link" th:href="@{/firstpage}"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQ3OS44MzggNDc5LjgzOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc5LjgzOCA0NzkuODM4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBzdHlsZT0iZmlsbDojN0ZDMTQwOyIgZD0iTTQzOS45MTksMGwtMC4yMjQsOTguODRsLTEyLjM0NCwyNDYuMTc2Yy0xOC4yMjQtMC4xNzYtNDguMzY4LTAuMjY0LTY2LjU3NiwwLjEwNEwzNDguMzAzLDk5LjcwNA0KCUwzNDguMjQ3LDBINDM5LjkxOXogTTE3Ni41ODMsMTIwLjgzMkwxNzYuNDM5LDAuMTg0bDkxLjQwOCwwLjA0OGwtMC4xMzYsMTIwLjg0bDUyLjcyOCwwLjAzMmwtMC4wMzIsNjIuMjk2bC01Mi42NDgtMC4wMTYNCglsMC4yNDgsMjAwLjc2YzAuMTI4LDIwLjE1Miw5LjM4NCwyOC42NzIsMjkuNTIsMjkuMzZjMi4wNCwwLjA1NiwyMC44LDAuMDU2LDIyLjkwNCwwTDMyMC4zMDMsNDc2DQoJYy0zMS4wMjQsMy4zMTItNjYuMjg4LDYuNDg4LTk3LjIyNCwwLjM2Yy0yOC4wNjQtNS41NjgtNDAuOTg0LTIxLjE2LTQ0Ljc0NC01MS4zNzZjLTEuMzg0LTEwLjUwNC0yLjAyNC0yMS4wOC0yLjAyNC0zMS42NjQNCglsMC4xMDQtMjA5LjkxMmwtNDUuNzkyLTEuOTA0TDEzMC44NzEsNDcySDQwLjE0M2wtMC4wMzItMTc1LjY4OEwzOS45MTksMTE5Ljg0TDE3Ni41ODMsMTIwLjgzMnoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiM2QkE5MzU7IiBkPSJNNDM5LjkxOSwwLjE2OGwtMC4yMjQsOTguNzZsLTEyLjM0NCwyNDYuMTQ0Yy0xOC4yMjQtMC4xNzYtNDguMzY4LTAuMjgtNjYuNTc2LDAuMDg4TDM0OC4zMDMsOTkuODE2DQoJbDMwLjY5Ni0zOC4xNjhMNDM5LjkxOSwwLjE2OHogTTE3Ni41ODMsMTIwLjgzMkwxNzYuNDM5LDMwLjRsOTEuNDA4LTMwLjE2OGwtMC4xMzYsMTUyLjI1Nmw1Mi43MjgtMzEuMzg0bC0wLjAzMiw2Mi4yOTYNCglsLTUyLjY0OC0wLjAxNmwwLjI0OCwyMDAuNzZjMC4xMjgsMjAuMTUyLDkuMzg0LDI4LjY3MiwyOS41MiwyOS4zNmMyLjA0LDAuMDU2LDIwLjgsMC4wNTYsMjIuOTA0LDBMMzIwLjMwMyw0NzYNCgljLTMxLjAyNCwzLjMxMi02Ni4yODgsNi40ODgtOTcuMjI0LDAuMzZjLTI4LjA2NC01LjU2OC00MC45ODQtMjEuMTYtNDQuNzQ0LTUxLjM3NmMtMS4zODQtMTAuNTA0LTIuMDI0LTIxLjA4LTIuMDI0LTMxLjY2NA0KCWwwLjEwNC0yMDkuOTEybC00NS43OTItMS45MDRMMTMwLjg3MSw0NzJINDAuMTQzbC0wLjAzMi0xNzUuNjg4bC0wLjE5Mi0xMjMuMjE2TDE3Ni41ODMsMTIwLjgzMnoiLz4NCjxyZWN0IHg9IjM1MS45MTkiIHk9IjM5MiIgc3R5bGU9ImZpbGw6IzdCRUEwNjsiIHdpZHRoPSI4OCIgaGVpZ2h0PSI4MCIvPg0KPHBvbHlsaW5lIHN0eWxlPSJmaWxsOiM2Q0M0MDY7IiBwb2ludHM9IjQzOS45MTksMzkyIDQzOS45MTksNDcyIDM1MS45MTksNDcyICIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzdCRUEwNjsiIGQ9Ik00MC40MjMsMS4wMDhjMjUuODMyLDAuMjI0LDY0LjAxNiwwLjY2NCw4OS44NjQsMC4zODRMMTMwLjE5OSw4MGgtODkuOTJMNDAuNDIzLDEuMDA4eiIvPg0KPHBvbHlsaW5lIHN0eWxlPSJmaWxsOiM2Q0M0MDY7IiBwb2ludHM9IjEzMC4xMTEsMS43ODQgMTMwLjE5OSw4MCAzOS45MTksODAgIi8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojNjA5QjI3OyIgZD0iTTQwLjEyNywzNTkuMjRMNDAuMTQzLDQ3Mmg5MC43MjhsLTAuMTM2LTEzNS40ODhDOTkuNTkxLDM0Ni41NDQsNjkuMTc1LDM1NC43NDQsNDAuMTI3LDM1OS4yNHoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojNjA5QjI3OyIgZD0iTTM1NC40OTUsMjIxLjY5Nmw2LjI3MiwxMjMuNDU2YzE4LjIwOC0wLjM2OCw0OC4zNTItMC4yNjQsNjYuNTc2LTAuMDg4bDkuOTY4LTE5OC45NzYNCgkJQzQxMy43NzUsMTcyLjEyOCwzODUuOTI3LDE5Ny42MTYsMzU0LjQ5NSwyMjEuNjk2eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiM2MDlCMjc7IiBkPSJNMjk3LjUzNSw0MTMuNTA0Yy0yMC4xNDQtMC42ODgtMjkuNC05LjIwOC0yOS41Mi0yOS4zNmwtMC4xMzYtMTA1LjM4NA0KCQljLTIuNjcyLDEuNTA0LTUuMjg4LDMuMDQ4LTcuOTkyLDQuNTI4Yy0yNy44NCwxNS4zMjgtNTUuODMyLDI4LjQ3Mi04My41NDQsMzkuNTkybC0wLjAzMiw3MC40MzJjMCwxMC41ODQsMC42NCwyMS4xNiwyLjAyNCwzMS42NjQNCgkJYzMuNzYsMzAuMjE2LDE2LjY4LDQ1LjgwOCw0NC43NDQsNTEuMzc2YzMwLjkzNiw2LjEyOCw2Ni4yLDIuOTUyLDk3LjIyNC0wLjM2bDAuMTQ0LTYyLjQ5Ng0KCQlDMzE4LjMzNSw0MTMuNTYsMjk5LjU3NSw0MTMuNTYsMjk3LjUzNSw0MTMuNTA0eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo="
+                                                     alt="login" width="50"height="50"/></a>
+    <a class="navbar-brand" th:href="@{/firstpage}">Common-IT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <a class="nav-link" th:href="@{/pay}"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGNpcmNsZSBzdHlsZT0iZmlsbDojRkZEQzAwOyIgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojRkZDMDAwOyIgZD0iTTI4MS44NTcsNTEwLjcwN0M0MTEuMDk4LDQ5Ny43NDMsNTEyLDM4OC42NTcsNTEyLDI1NmMwLTAuNDM4LTAuMDE0LTAuODczLTAuMDE3LTEuMzExDQoJbC05MC4yNTMtOTAuMjUzTDI5OS43NjMsMjkwLjUwMkwxMzUuNjg2LDEyNC41bC00Ny40NDEsMjBsODQuNzk3LDg0LjU4OUwxNTQuOTIsMzc2Ljg0NmwzMS4xMDksMzAuNTE2bC0zLjk5LDMuNTI1TDI4MS44NTcsNTEwLjcwNw0KCXoiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMDhDQzM7IiBwb2ludHM9IjE1Ny43NDIsMzMxLjEwMiAzOTkuMTM1LDMzMS4xMDIgNDIxLjczLDE2NC40MzYgMTM1LjE0NywxNjQuNDM2ICIvPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzAwNzRBMzsiIHBvaW50cz0iNDIxLjczLDE2NC40MzYgMjU1Ljg1NywxNjQuNDM2IDI1NS44NTcsMzMxLjEwMiAzOTkuMTM1LDMzMS4xMDIgIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojMDA4Q0MzOyIgcG9pbnRzPSIxMzUuMTQ3LDE2NC40MzYgMTU3Ljc0MiwzMzEuMTAyIDI3OC40MzgsMzMxLjEwMiAyNzguNDM4LDE2NC40MzYgIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojMDBCQUZGOyIgcG9pbnRzPSIxNjcuMzc2LDE4OS4zNDYgMTgyLjMxNywzMDYuMDM4IDIwNy41OTMsMzA2LjAzOCAxOTYuNTgxLDE4OS4zNDYgIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojMDA4Q0MzOyIgcG9pbnRzPSIzNjAuMjk2LDE4OS4zNDYgMzQ5LjI4NCwzMDYuMDM4IDM3NC41NiwzMDYuMDM4IDM4OS41MDEsMTg5LjM0NiAiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMEJBRkY7IiBwb2ludHM9IjIzMC4yMDUsMTg5LjM0NiAyMzcuMzAxLDMwNi4wMzggMjYwLjE3MywzMDYuMDM4IDI1Ni42MzEsMTg5LjM0NiAiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMDhDQzM7IiBwb2ludHM9IjMwMC4yNDUsMTg5LjM0NiAyOTYuNzA0LDMwNi4wMzggMzE5LjU3NSwzMDYuMDM4IDMyNi42NzIsMTg5LjM0NiAiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6IzAwMTMxRTsiIGN4PSIzNTYuNjUiIGN5PSIzOTEuMzUiIHI9IjI0LjUiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6IzAwMjYzRjsiIGN4PSIxOTYuODEiIGN5PSIzOTEuMzUiIHI9IjI0LjUiLz4NCjxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMDVDODM7IiBwb2ludHM9IjM5NS45MzYsMzc2Ljg0NiAxNTQuOTIsMzc2Ljg0NiAxMTguNTcyLDE0NC41IDg4LjI0NSwxNDQuNSA4OC4yNDUsMTI0LjUgMTM1LjY4NiwxMjQuNSANCgkxNzIuMDM0LDM1Ni44NDYgMzk1LjkzNiwzNTYuODQ2ICIvPg0KPHJlY3QgeD0iMjc4LjQ0IiB5PSIzNTYuODUiIHN0eWxlPSJmaWxsOiMwMDI2M0Y7IiB3aWR0aD0iMTE3LjUiIGhlaWdodD0iMjAiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K"
+                                                       alt="login" width="50"height="50"/></a>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/login}"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTQxMy4zOCAzMTguMzZjMCA2OS4xMi0zNi4yMiAxMjkuNzktOTAuNzMgMTY0LjA1LTE0LjkxIDkuMzgtNTguOTEgMTQuMDYtMTAyLjkxIDE0LjA2LTQ0IC4wMS04OC00LjY4LTEwMi45MS0xNC4wNS01NC41MS0zNC4yNi05MC43My05NC45My05MC43My0xNjQuMDYgMC0xMDYuOTUgODYuNjktMTkzLjY0IDE5My42NC0xOTMuNjQgMTA2Ljk0IDAgMTkzLjY0IDg2LjY5IDE5My42NCAxOTMuNjR6IiBmaWxsPSIjNDg1ODhiIi8+PHBhdGggZD0ibTQxMy4zOCAzMTguMzZjMCA2OS4xMi0zNi4yMiAxMjkuNzktOTAuNzMgMTY0LjA1LTE0LjkxIDkuMzgtNTguOTEgMTQuMDYtMTAyLjkxIDE0LjA2di0zNzEuNzVjMTA2Ljk0IDAgMTkzLjY0IDg2LjY5IDE5My42NCAxOTMuNjR6IiBmaWxsPSIjM2M0YTgzIi8+PGVsbGlwc2UgY3g9IjIxOS43NCIgY3k9IjI5Mi40OCIgZmlsbD0iI2Y5YzRiOSIgcng9IjU1LjkxIiByeT0iNTUuOTEiIHRyYW5zZm9ybT0ibWF0cml4KC4yMyAtLjk3MyAuOTczIC4yMyAtMTE1LjQwMiA0MzkuMTQ0KSIvPjxwYXRoIGQ9Im0yNzUuNjUgMjkyLjQ4YzAgMzAuODgtMjUuMDMgNTUuOTEtNTUuOTEgNTUuOTF2LTExMS44MmMzMC44OCAwIDU1LjkxIDI1LjA0IDU1LjkxIDU1LjkxeiIgZmlsbD0iI2ZmYjE5ZSIvPjxwYXRoIGQ9Im0zMjIuNjUgNDI5LjA1djUzLjM2Yy0yOS44MSAxOC43NS02NS4wOSAyOS41OS0xMDIuOTEgMjkuNTlzLTczLjEtMTAuODQtMTAyLjkxLTI5LjU4di01My4zN2MwLTQ0LjU1IDM2LjExLTgwLjY2IDgwLjY1LTgwLjY2aDQ0LjUyYzQ0LjU0IDAgODAuNjUgMzYuMTEgODAuNjUgODAuNjZ6IiBmaWxsPSIjNjBlMmY0Ii8+PHBhdGggZD0ibTMyMi42NSA0MjkuMDV2NTMuMzZjLTI5LjgxIDE4Ljc1LTY1LjA5IDI5LjU5LTEwMi45MSAyOS41OXYtMTYzLjYxaDIyLjI2YzQ0LjU0IDAgODAuNjUgMzYuMTEgODAuNjUgODAuNjZ6IiBmaWxsPSIjMjljNWVjIi8+PHBhdGggZD0ibTQ1Ny45MTIgNjIuOTR2MzMuNzloLTMwdi0zMy43OWMwLTE4LjE2LTE0Ljc4LTMyLjk0LTMyLjk0LTMyLjk0LTE4LjE3IDAtMzIuOTQgMTQuNzgtMzIuOTQgMzIuOTR2MzMuNzloLTMwdi0zMy43OWMwLTM0LjcgMjguMjMtNjIuOTQgNjIuOTQtNjIuOTRzNjIuOTQgMjguMjQgNjIuOTQgNjIuOTR6IiBmaWxsPSIjY2RkYmY5Ii8+PHBhdGggZD0ibTQ1Ny45MTIgNjIuOTR2MzMuNzloLTMwdi0zMy43OWMwLTE4LjE2LTE0Ljc4LTMyLjk0LTMyLjk0LTMyLjk0di0zMGMzNC43MSAwIDYyLjk0IDI4LjI0IDYyLjk0IDYyLjk0eiIgZmlsbD0iI2FmYzJlOCIvPjxwYXRoIGQ9Im0zMDQuMDMgODEuNzN2MTY3LjQ0aDc1Ljk0bDE1LTEwLjc1IDE1IDEwLjc1aDc1Ljkzdi0xNjcuNDR6IiBmaWxsPSIjZmVhMDAwIi8+PHBhdGggZD0ibTQ4NS45IDgxLjczdjE2Ny40NGgtNzUuOTNsLTE1LTEwLjc1di0xNTYuNjl6IiBmaWxsPSIjZjc4MDAyIi8+PHBhdGggZD0ibTM3OS45NzIgMTUwLjQ1aDMwdjk4LjcyaC0zMHoiIGZpbGw9IiNmYmUyMDAiLz48cGF0aCBkPSJtMzk0Ljk3MiAxNTAuNDVoMTV2OTguNzJoLTE1eiIgZmlsbD0iI2ZlYmYwMSIvPjwvZz48L3N2Zz4="
+                                                             alt="login" width="50"height="50"/></a>
+            </li>
+            <a class="nav-link" th:href="@{/customer}"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6Izc2QkRGNjsiIHBvaW50cz0iMzY4LjgxNCwwIDE0My4xODYsMCAxNDMuMTg2LDE5OS41OTMgODIuNDQxLDE5OS41OTMgMjU2LDMwMy43MjkgNDI5LjU1OSwxOTkuNTkzIA0KCTM2OC44MTQsMTk5LjU5MyAiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiMzNjg5Qzk7IiBkPSJNNDcyLjk0OSwxMTIuODE0SDM2OC44MTR2MzQuNzEyaDEwNC4xMzZ2MjI1LjYyN0gzOS4wNTFWMTQ3LjUyNWgxMDQuMTM2di0zNC43MTJIMzkuMDUxDQoJYy0xOS4xNywwLTM0LjcxMiwxNS41NDItMzQuNzEyLDM0LjcxMnYyNDIuOTgzYzAsMTkuMTcsMTUuNTQyLDM0LjcxMiwzNC43MTIsMzQuNzEyaDQzMy44OThjMTkuMTcsMCwzNC43MTItMTUuNTQyLDM0LjcxMi0zNC43MTINCglWMTQ3LjUyNUM1MDcuNjYxLDEyOC4zNTYsNDkyLjExOSwxMTIuODE0LDQ3Mi45NDksMTEyLjgxNHoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiNGRkREQkE7IiBkPSJNMzkuMDUxLDM3My4xNTNoNDMzLjg5OFYxNDcuNTI1SDM2OC44MTR2NTIuMDY4aDYwLjc0NkwyNTYsMzAzLjcyOUw4Mi40NDEsMTk5LjU5M2g2MC43NDZ2LTUyLjA2OA0KCUgzOS4wNTFWMzczLjE1M3oiLz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMzNjg5Qzk7IiBkPSJNNC4zMzksNDc3LjI4OEM0LjMzOSw1MDYuMDQ3LDI3LjY0OCw1MTIsNTYuNDA3LDUxMmgzOTkuMTg2YzI4Ljc1OSwwLDUyLjA2OC01Ljk1Myw1Mi4wNjgtMzQuNzEyDQoJCUg0LjMzOXoiLz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojMzY4OUM5OyIgcG9pbnRzPSIxNjkuMjIsNDc3LjI4OCAzNDIuNzgsNDc3LjI4OCAzMTYuNzQ2LDQyNS4yMiAxOTUuMjU0LDQyNS4yMiAJIi8+DQo8L2c+DQo8cGF0aCBzdHlsZT0iZmlsbDojRkZEREJBOyIgZD0iTTMwOC4wNjgsODYuNzhsLTQzLjM5LTI2LjAzNEMyNTYsODYuNzgsMjAzLjkzMiw4Ni43OCwyMDMuOTMyLDg2Ljc4DQoJYzAsMjguNzU5LDMzLjY2Miw1Mi4wNjgsNTIuMDY4LDUyLjA2OFMzMDguMDY4LDExNS41MzgsMzA4LjA2OCw4Ni43OHoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiM4NTRGMDk7IiBkPSJNMjY0LjY3OCw2MC43NDZsNDMuMzksMjYuMDM0YzAtMjguNzU5LTguNjc4LTYwLjc0Ni01Mi4wNjgtNjAuNzQ2cy01Mi4wNjgsMzEuOTg3LTUyLjA2OCw2MC43NDYNCglDMjAzLjkzMiw4Ni43OCwyNTYsODYuNzgsMjY0LjY3OCw2MC43NDZ6Ii8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojMzY4OUM5OyIgZD0iTTE4Ni41NzYsMjA4LjI3MXYtMzQuNzEyYzAtMTkuMTcsMTUuNTQyLTM0LjcxMiwzNC43MTItMzQuNzEyaDY5LjQyNA0KCQljMTkuMTcsMCwzNC43MTIsMTUuNTQyLDM0LjcxMiwzNC43MTJ2MzQuNzEySDE4Ni41NzZ6Ii8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzM2ODlDOTsiIHBvaW50cz0iNDQyLjU3NiwzMTYuNzQ2IDQyMC44ODEsMzE2Ljc0NiA0MjAuODgxLDI5NS4wNTEgNDEyLjIwMywyOTUuMDUxIDQxMi4yMDMsMzE2Ljc0NiANCgkJMzkwLjUwOCwzMTYuNzQ2IDM5MC41MDgsMzI1LjQyNCA0MTIuMjAzLDMyNS40MjQgNDEyLjIwMywzNDcuMTE5IDQyMC44ODEsMzQ3LjExOSA0MjAuODgxLDMyNS40MjQgNDQyLjU3NiwzMjUuNDI0IAkiLz4NCjwvZz4NCjxnIHN0eWxlPSJvcGFjaXR5OjAuMTQ7Ij4NCgk8cG9seWdvbiBwb2ludHM9IjMxNi43NDYsNDI1LjIyIDE5NS4yNTQsNDI1LjIyIDE5MC45MTUsNDMzLjg5OCAxOTUuMjU0LDQzMy44OTggMzE2Ljc0Niw0MzMuODk4IDMyMS4wODUsNDMzLjg5OCAJIi8+DQo8L2c+DQo8ZyBzdHlsZT0ib3BhY2l0eTowLjE0OyI+DQoJPHBvbHlnb24gcG9pbnRzPSIyNTYsMzAzLjcyOSAxMTEuMzY0LDIxNi45NDkgODIuNDQxLDIxNi45NDkgMjU2LDMyMS4wODUgNDI5LjU1OSwyMTYuOTQ5IDQwMC42MzYsMjE2Ljk0OSAJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="
+                                                            alt="Register" width="50"height="50"/></a>
+        </ul>
+    </div>
+</nav>
+</body>
+<div class="cxzbx5" data-spm="filter">
+    <div class="c2cYd1">
+        <div class="cnHBqi">หมวดหมู่</div>
+        <div class="c2uiAC"><div>
+            <div class="c1WzWT c3cfO2">
+                <div>
+                    <a data-spm-click="gostr=/lzdse.result.filter;locaid=d1" class="cds557 c3AoG7" th:href="@{/powerbank}">พาวเวอร์แบงค์</a>
+                    <a data-spm-click="gostr=/lzdse.result.filter;locaid=d2" class="cds557 " th:href="@{/charging}">สายชาร์จ</a>
+                    <a data-spm-click="gostr=/lzdse.result.filter;locaid=d2" class="cds557 " th:href="@{/charghead}">หัวชาร์จ</a>
+                    <a data-spm-click="gostr=/lzdse.result.filter;locaid=d2" class="cds557 " th:href="@{/casephone}">เคสมือถือ</a>
+                    <a data-spm-click="gostr=/lzdse.result.filter;locaid=d2" class="cds557 " th:href="@{/headphone}">หูฟัง</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="four">
+    <table width=10% cellpadding="4" cellspacing="0" style="border:double 5px hotpink;"><tr><td style="border:double 5px hotpink;">
+        <div class="c2prKC" data-qa-locator="product-item" data-tracking="product-card" data-sku-simple="" data-item-id="172110113" data-aplus-ae="x1_6fce9ffd" data-spm-anchor-id="a2o4m.searchlist.list.i0.62494fe9sdwoDs">
+            <div class="c3e8SH c2mzns"><div class="c5TXIP">
+                <div class="c2iYAv">
+                    <div class="cRjKsc">
+                        <a age="0" th:href="@{/product9}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/f99253bc2929c55e216c39777d5f8e5f.png" alt="Eloop EQ-24BUS หัวชาร์จเร็ว USB Quick Charge 3.0 24W Wall Charger Adaptor ของแท้ 100%" age="0" type="product"></a>
+                    </div>
+                    <div class="c29wL3">
+                        <div class="c2iaNs">
+                            <div class="chjNHW">
+                                <a age="0" class="c1dZ-V cMxzBS" th:href="@{/product9}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/f99253bc2929c55e216c39777d5f8e5f.png" age="0" type="thumb"></a>
+                            </div>
+                            <div class="chjNHW">
+                                <a age="0" class="c1dZ-V" th:href="@{/product9}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/f83e24b3e30de663c3e9b9319cadcc10.png" age="0" type="thumb"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c3KeDq">
+                    <div class="c3vCyH">
+                        <i class="ic-dynamic-badge ic-dynamic-badge-lazMall ic-dynamic-group-1"></i>
+                    </div>
+                    <div class="c16H9d">
+                        <a age="0" th:href="@{/product9}" title="Eloop EQ-24BUS หัวชาร์จเร็ว USB Quick Charge 3.0 24W Wall Charger Adaptor ของแท้ 100%">Eloop EQ-24BUS หัวชาร์จเร็ว USB Quick Charge 3.0 24W Wall Charger Adaptor ของแท้ 100%</a>
+                    </div>
+                    <div class="c3gUW0">
+                        <span class="c13VH6">฿399.00</span>
+                    </div>
+                </div></td></tr></table>
+    <div class="four2">
+        <table width=10% cellpadding="4" cellspacing="0" style="border:double 5px hotpink;"><tr><td style="border:double 5px hotpink;">
+            <div class="c2prKC" data-qa-locator="product-item" data-tracking="product-card" data-sku-simple="" data-item-id="120368710" data-aplus-ae="x3_68d233ad" data-spm-anchor-id="a2o4m.searchlist.list.i2.62494fe9sdwoDs">
+                <div class="c3e8SH c2mzns">
+                    <div class="c5TXIP">
+                        <div class="c2iYAv">
+                            <div class="cRjKsc">
+                                <a age="0" th:href="@{/product10}"><img class="c1ZEkM " src="https://th-live-01.slatic.net/p/e2f570880b9144fb724f6a9dbc3a0cbb.jpg" alt="[UGREEN] หัวชาร์จเร็ว QC3.0 USB ขนาด 18W ขาปลั๊กแบบ US สำหรับ Chuwi Hi10 X/oppo a5s/VIVO/redmi note 9s/Realme/iPhone 11/SAMSUNG S20+/A70/A50/Huawei P40" age="0" type="product"></a>
+                            </div>
+                            <div class="c29wL3">
+                                <div class="c2iaNs">
+                                    <div class="chjNHW">
+                                        <a age="0" class="c1dZ-V cMxzBS" th:href="@{/product10}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/e2f570880b9144fb724f6a9dbc3a0cbb.jpg" age="0" type="thumb"></a>
+                                    </div>
+                                    <div class="chjNHW">
+                                        <a age="0" class="c1dZ-V" th:href="@{/product10}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/ddb3b64253e4ff4b77921e778982ea8d.jpg" age="0" type="thumb"></a>
+                                    </div>
+                                    <div class="chjNHW">
+                                        <a age="0" class="c1dZ-V" th:href="@{/product10}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/8bbe5f923cd8670069f3393a8a4b5bb7.jpg" age="0" type="thumb"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c3KeDq">
+                            <div class="c3vCyH">
+                                <i class="ic-dynamic-badge ic-dynamic-badge-lazMall ic-dynamic-group-1"></i>
+                            </div>
+                            <div class="c16H9d">
+                                <a age="0" th:href="@{/product10}" title="[UGREEN] หัวชาร์จเร็ว QC3.0 USB ขนาด 18W ขาปลั๊กแบบ US สำหรับ Chuwi Hi10 X/oppo a5s/VIVO/redmi note 9s/Realme/iPhone 11/SAMSUNG S20+/A70/A50/Huawei P40">[UGREEN] หัวชาร์จเร็ว QC3.0 USB ขนาด 18W ขาปลั๊กแบบ US สำหรับ Chuwi Hi10 X/oppo a5s/VIVO/redmi note 9s/Realme/iPhone 11/SAMSUNG S20+/A70/A50/Huawei P40</a>
+                            </div>
+                            <div class="c3gUW0">
+                                <span class="c13VH6">฿299.00</span>
+                            </div>
+                        </div></td></tr></table>
+        <div class="four2">
+            <table width=10% cellpadding="4" cellspacing="0" style="border:double 5px hotpink;"><tr><td style="border:double 5px hotpink;">
+        <div class="c2prKC" data-qa-locator="product-item" data-tracking="product-card" data-sku-simple="" data-item-id="1721740330" data-aplus-ae="x4_3adf00a1" data-spm-anchor-id="a2o4m.searchlist.list.i3.49984fe91tMEO4">
+            <div class="c3e8SH c2mzns">
+                <div class="c5TXIP">
+                    <div class="c2iYAv">
+                        <div class="cRjKsc">
+                            <a age="0" th:href="@{/product11}"><img class="c1ZEkM " src="https://th-live-01.slatic.net/p/eaa7c44f7ea0ffa6f87e507ccc81a59d.jpg" alt="หัวชาร์จ หัวชาร์จเร็ว ที่ชาร์จแบต ที่ชาร์จเร็ว USB Wall Fast Port Charger 3 กิกะ ที่ชาร์จโทรศัพ หัวชาร์จเร็ว samsung Phone Huawei vivo สายชาร์จแบต KKQC" age="0" type="product"></a>
+                        </div>
+                        <div class="c29wL3">
+                            <div class="c2iaNs">
+                                <div class="chjNHW">
+                                    <a age="0" class="c1dZ-V cMxzBS" th:href="@{/product11}"><img class="c1ZEkM " src="https://th-live-01.slatic.net/p/eaa7c44f7ea0ffa6f87e507ccc81a59d.jpg" age="0" type="thumb"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c3KeDq">
+                        <div class="c3vCyH"></div>
+                        <div class="c16H9d">
+                            <a age="0" th:href="@{/product11}" title="หัวชาร์จ หัวชาร์จเร็ว ที่ชาร์จแบต ที่ชาร์จเร็ว USB Wall Fast Port Charger 3 กิกะ ที่ชาร์จโทรศัพ หัวชาร์จเร็ว samsung Phone Huawei vivo สายชาร์จแบต KKQC">หัวชาร์จ หัวชาร์จเร็ว ที่ชาร์จแบต ที่ชาร์จเร็ว USB Wall Fast Port Charger 3 กิกะ ที่ชาร์จโทรศัพ หัวชาร์จเร็ว samsung Phone Huawei vivo สายชาร์จแบต KKQC</a>
+                        </div>
+                        <div class="c3gUW0">
+                            <span class="c13VH6">฿112.48</span>
+                        </div>
+                    </div></td></tr></table>
+                        <div class="four2">
+                            <table width=10% cellpadding="4" cellspacing="0" style="border:double 5px hotpink;"><tr><td style="border:double 5px hotpink;">
+        <div class="c2prKC" data-qa-locator="product-item" data-tracking="product-card" data-sku-simple="" data-item-id="1491120262" data-aplus-ae="x13_7b855435" data-spm-anchor-id="a2o4m.searchlist.list.i12.49984fe91tMEO4">
+            <div class="c3e8SH c2mzns">
+                <div class="c5TXIP">
+                    <div class="c2iYAv">
+                        <div class="cRjKsc">
+                            <a age="0" th:href="@{/product12}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/621b8907ce7c75961821ad2dab299c74.jpg" alt="WACA All New Z28 Quick Charge 3.0(36 Watt)หัวชาร์จเร็ว ที่ชาร์จเสียบที่จุดบูหรี่ Power Ocean In-Car Charger With Digital Display Dual USB ของแท้100% #U38 #FA" age="0" type="product"></a>
+                        </div>
+                        <div class="c29wL3">
+                            <div class="c2iaNs">
+                                <div class="chjNHW">
+                                    <a age="0" class="c1dZ-V cMxzBS" th:href="@{/product12}"><img class="c1ZEkM" src="https://th-live-01.slatic.net/p/621b8907ce7c75961821ad2dab299c74.jpg" age="0" type="thumb"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c3KeDq">
+                        <div class="c3vCyH"></div>
+                        <div class="c16H9d">
+                            <a age="0" th:href="@{/product12}" title="WACA All New Z28 Quick Charge 3.0(36 Watt)หัวชาร์จเร็ว ที่ชาร์จเสียบที่จุดบูหรี่ Power Ocean In-Car Charger With Digital Display Dual USB ของแท้100% #U38 #FA">WACA All New Z28 Quick Charge 3.0(36 Watt)หัวชาร์จเร็ว ที่ชาร์จเสียบที่จุดบูหรี่ Power Ocean In-Car Charger With Digital Display Dual USB ของแท้100% #U38 #FA</a>
+                        </div>
+                        <div class="c3gUW0">
+                            <span class="c13VH6">฿169.16</span>
+                        </div>
+                    </div></td></tr></table>
+</html>
